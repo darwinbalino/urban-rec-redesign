@@ -55,28 +55,18 @@ export default function AboutSection() {
 
         <div className="space-y-6 text-urban-light/85 leading-relaxed text-[15px] sm:text-base">
           <motion.p variants={itemVariants}>
-            Urban Rec is Vancouver&apos;s premier recreational sports league,
-            bringing together thousands of active adults who share a passion for
-            sports, fitness, and community. Since our founding, we&apos;ve
-            created an inclusive environment where players of all skill levels
-            can compete, connect, and have fun.
+            Urban Rec Leagues are all about being active, being social, and
+            having fun. At Urban Rec we stress the FUN and social aspect of
+            playing adult sports with your friends. It really is all about
+            getting out, meeting people, and generally having a good time.
           </motion.p>
 
           <motion.p variants={itemVariants}>
-            Whether you&apos;re looking to stay active, meet new people, or
-            rediscover your competitive spirit, Urban Rec offers a diverse range
-            of sports leagues throughout the year. Our professionally organized
-            leagues take the hassle out of recreational sports, providing
-            everything from venue coordination to certified referees and
-            convenient online scheduling.
-          </motion.p>
-
-          <motion.p variants={itemVariants}>
-            What sets Urban Rec apart is our vibrant community. Beyond the
-            games, we host social events, tournaments, and post-game gatherings
-            that turn teammates into lifelong friends. Join us and experience
-            why thousands of Vancouverites choose Urban Rec as their go-to for
-            active recreation and social connection.
+            Urban Rec has one goal: to provide the best possible experience to
+            our members. Whether it&apos;s league nights, theme parties, team
+            trips, social gatherings, or other Urban Rec events, we want to
+            provide an unparalleled experience that you&apos;ll remember
+            forever.
           </motion.p>
         </div>
 

@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
 const sports = [
-  { name: "Basketball", image: "/basketball.jpg" },
   { name: "Volleyball", image: "/volleyball.jpg" },
   { name: "Kickball", image: "/kickball.jpg" },
   { name: "Hockey", image: "/hockey.jpg" },
@@ -70,7 +69,7 @@ export default function HeroCarousel() {
 
   return (
     <section
-      className="relative w-full h-[calc(75vh-115px)] min-h-[335px] max-h-[535px] overflow-hidden mt-[72px]"
+      className="relative w-full h-[calc(75vh-240px)] min-h-[210px] max-h-[410px] overflow-hidden mt-[72px]"
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
