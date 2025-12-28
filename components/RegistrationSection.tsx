@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import { ChevronDown, User, Users } from "lucide-react";
+import Link from "next/link";
 import { useRef, useState } from "react";
 
 const sports = [
@@ -12,7 +13,6 @@ const sports = [
   "Flag Football",
   "Dodgeball",
   "Ultimate Frisbee",
-  "Kickball",
 ];
 
 export default function RegistrationSection() {
@@ -123,23 +123,27 @@ export default function RegistrationSection() {
 
         {/* CTA Buttons */}
         <motion.div variants={itemVariants} className="flex flex-col gap-4">
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="w-full py-4 px-8 bg-urban-red text-white font-display text-xl tracking-widest flex items-center justify-center gap-3 hover:bg-urban-red/90 active:bg-urban-red rounded-sm"
-          >
-            <Users size={20} />
-            REGISTER TEAM
-          </motion.button>
+          <Link href="/register">
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full py-4 px-8 bg-urban-red text-white font-display text-xl tracking-widest flex items-center justify-center gap-3 hover:bg-urban-red/90 active:bg-urban-red rounded-sm"
+            >
+              <Users size={20} />
+              REGISTER TEAM
+            </motion.button>
+          </Link>
 
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="w-full py-4 px-8 border-2 border-urban-light text-urban-light font-display text-xl tracking-widest flex items-center justify-center gap-3 hover:bg-urban-light hover:text-urban-dark active:bg-urban-light/90 rounded-sm"
-          >
-            <User size={20} />
-            REGISTER INDIVIDUAL
-          </motion.button>
+          <Link href="/register">
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full py-4 px-8 border-2 border-urban-light text-urban-light font-display text-xl tracking-widest flex items-center justify-center gap-3 hover:bg-urban-light hover:text-urban-dark active:bg-urban-light/90 rounded-sm"
+            >
+              <User size={20} />
+              REGISTER INDIVIDUAL
+            </motion.button>
+          </Link>
         </motion.div>
       </motion.div>
     </section>

@@ -9,19 +9,19 @@ import { useEffect, useRef, useState } from "react";
 const menuItems = [
   { label: "HOME", href: "/" },
   { label: "LEAGUES", href: "/register" },
-  { label: "REGIONS", href: "#" },
-  { label: "TOURNAMENTS", href: "#" },
-  { label: "MEMBERS", href: "#" },
-  { label: "SOCIAL", href: "#" },
-  { label: "PERKS", href: "#" },
+  { label: "REGIONS", href: "register" },
+  { label: "TOURNAMENTS", href: "register" },
+  { label: "MEMBERS", href: "register" },
+  { label: "SOCIAL", href: "register" },
+  { label: "PERKS", href: "register" },
 ];
 
 // Desktop nav - fewer items, more focused
 const desktopNavItems = [
   { label: "LEAGUES", href: "/register" },
-  { label: "REGIONS", href: "#" },
-  { label: "TOURNAMENTS", href: "#" },
-  { label: "ABOUT", href: "#" },
+  { label: "REGIONS", href: "register" },
+  { label: "TOURNAMENTS", href: "register" },
+  { label: "ABOUT", href: "register" },
 ];
 
 interface AuthUser {

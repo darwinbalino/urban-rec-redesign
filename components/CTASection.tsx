@@ -1,7 +1,7 @@
 "use client";
-
 import { motion, useInView } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { useRef } from "react";
 
 export default function CTASection() {
@@ -45,7 +45,6 @@ export default function CTASection() {
         >
           READY TO GET ACTIVE?
         </motion.h2>
-
         <motion.p
           variants={itemVariants}
           className="text-urban-dark/75 text-lg mb-10 leading-relaxed"
@@ -53,31 +52,34 @@ export default function CTASection() {
           Join thousands of players in Vancouver&apos;s most exciting
           recreational sports leagues
         </motion.p>
-
         <motion.div variants={itemVariants} className="flex flex-col gap-4">
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="w-full py-4 px-8 bg-urban-dark text-urban-red font-display text-xl tracking-widest flex items-center justify-center gap-3 group hover:bg-urban-dark/90 active:bg-urban-dark"
-          >
-            JOIN A LEAGUE
-            <ArrowRight
-              size={20}
-              className="group-hover:translate-x-1 transition-transform"
-            />
-          </motion.button>
+          <Link href="/register">
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full py-4 px-8 bg-urban-dark text-urban-red font-display text-xl tracking-widest flex items-center justify-center gap-3 group hover:bg-urban-dark/90 active:bg-urban-dark"
+            >
+              JOIN A LEAGUE
+              <ArrowRight
+                size={20}
+                className="group-hover:translate-x-1 transition-transform"
+              />
+            </motion.button>
+          </Link>
 
-          <motion.button
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="w-full py-4 px-8 bg-urban-dark text-urban-red font-display text-xl tracking-widest flex items-center justify-center gap-3 group hover:bg-urban-dark/90 active:bg-urban-dark"
-          >
-            FIND A SPORT
-            <ArrowRight
-              size={20}
-              className="group-hover:translate-x-1 transition-transform"
-            />
-          </motion.button>
+          <Link href="/register">
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full py-4 px-8 bg-urban-dark text-urban-red font-display text-xl tracking-widest flex items-center justify-center gap-3 group hover:bg-urban-dark/90 active:bg-urban-dark"
+            >
+              FIND A SPORT
+              <ArrowRight
+                size={20}
+                className="group-hover:translate-x-1 transition-transform"
+              />
+            </motion.button>
+          </Link>
         </motion.div>
       </motion.div>
     </section>
