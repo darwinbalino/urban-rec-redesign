@@ -1,6 +1,6 @@
 import config from "@payload-config";
 import { NextRequest } from "next/server";
-import { getPayload } from "payload";
+import { getPayload, Where } from "payload";
 
 // Helper to extract ID from value (handles both string IDs and populated objects)
 function extractId(value: unknown): string | undefined {
@@ -52,10 +52,8 @@ export const GET = async (
       const depth = parseInt(url.searchParams.get("depth") || "0");
       const limit = parseInt(url.searchParams.get("limit") || "10");
 
-      // Build where clause
-      const where: Record<string, unknown> = {};
+      const where: Where = {};
 
-      // Parse where clause for published
       const publishedParam = url.searchParams.get("where[published][equals]");
       if (publishedParam) {
         where.published = { equals: publishedParam === "true" };
@@ -65,7 +63,7 @@ export const GET = async (
         collection,
         depth,
         limit,
-        where: Object.keys(where).length > 0 ? where : undefined,
+        ...(Object.keys(where).length > 0 && { where }),
       });
       return Response.json(docs);
     }
