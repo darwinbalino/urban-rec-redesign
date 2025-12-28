@@ -46,8 +46,8 @@ interface League {
 }
 
 // Admin credentials
-const ADMIN_USERNAME = "darwin";
-const ADMIN_PASSWORD = "05a2e52a9b37eda16f2539fc37525dc0";
+const ADMIN_USERNAME = "user";
+const ADMIN_PASSWORD = "password";
 
 // Days of week options
 const DAYS_OF_WEEK = [
